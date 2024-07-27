@@ -2,6 +2,7 @@ package Module03;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class Iterateall_Elements {
 	public static void main(String[] args) {
@@ -11,10 +12,15 @@ public class Iterateall_Elements {
 		List_strings.add("VadaPau");
 		List_strings.add("SounthIndian");
 		List_strings.add("Chaines");
+		System.out.println("ArrayList : " +List_strings);
 		
-		for(String element : List_strings) {
-			System.out.println(element);
+		ListIterator<String> iterate = List_strings.listIterator();
+		System.out.println("Iterator over ArrayList");
+		while(iterate.hasNext()) {
+			System.out.println(iterate.next()+", ");
 		}
+		
+		
 	}
 
 }
